@@ -7,5 +7,7 @@
   }
 
 .animate__fadeOutUp {
-    --animate-duration: 4s;
+    --animate-duration: 2s;
+    
+    
 }

@@ -1,5 +1,6 @@
 import { FaAngleDown } from "react-icons/fa";
 import 'animate.css';
+import { useEffect, useState } from "react";
 
 
 export const Content = () => {
@@ -58,7 +59,7 @@ export const Content = () => {
         ]
     };
     const text = ["DIY idea", "chai time snacks idea", "home decor idea", "outfit idea"];
-    const colors = ["red", "blue", "orange", "green"];
+    const colors = ["text-yellow-900", "text-teal-800", "text-blue-800", "text-rose-900"];
 
     const renderImages = (imageArray) => {
         return imageArray.map((imageUrl, index) => (
@@ -68,15 +69,27 @@ export const Content = () => {
         ));
     };
 
-    // const textArray = text.map((tags, index) => <h1 key={index} className="animate__animated animate__fadeOutUp animate__delay-2s animate__infinite">{tags}</h1>)
+    const [index, setIndex] = useState(0);
+    const [isIntervalStarted, setIsIntervalStarted] = useState(false);
+
+    useEffect(() => {
+            const internalId = setInterval(() => {
+                setIsIntervalStarted(true);
+                setIndex((i) => (i + 1) % text.length);
+            }, 2000);
+            return () => clearInterval(internalId);
+    }, []);
 
     return (
         <>
             <div className="w-full h-[75vh]" id='content'>
                 <div className="h-[75vh] mt-10 overflow-hidden ">
                     <h1 className="text-6xl text-center font-semibold">Get your next</h1>
+                    <div className="absolute w-full mt-8">
+                       { isIntervalStarted && <h1 className={`animate__animated animate__fadeOutUp animate-fast animate__infinite text-center font-semibold text-6xl ${colors[index]}`}>{text[index]}</h1>}
+                    </div>
                     <div className="flex justify-center gap-4">
-                        {['mt-0', 'mt-40', 'mt-60', 'mt-96', 'mt-60', 'mt-40', 'mt-0'].map((marginTop, index) => (
+                        {['mt-0', 'mt-28', 'mt-60', 'mt-96', 'mt-60', 'mt-28', 'mt-0'].map((marginTop, index) => (
                             <div className={`flex w-64 gap-4 flex-col ${marginTop}`} key={index}>
                                 {renderImages(imges[`img${index + 1}`])}
                             </div>
@@ -84,10 +97,10 @@ export const Content = () => {
                     </div>
                 </div>
 
-                <div className="text-center sticky bottom-0 ">
+                <div className="text-center w-full h-[22vh] sticky bottom-0">
                     <div className="relative bottom-1 w-full py-3">
                         <a href="#search">
-                            <FaAngleDown className="text-white animate__animated animate__shakeY animate__delay-2s animate__infinite mx-auto bg-[#0076d3] rounded-full h-12 p-2 w-fit" />
+                            <FaAngleDown className="text-white animate-bounce mx-auto bg-[#0076d3] rounded-full h-12 p-2 w-fit" />
                         </a>
                     </div>
                     <div className="font-semibold bg-[#fffd93] py-6 w-full text-md">
