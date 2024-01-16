@@ -9,13 +9,27 @@ export const Signup = ({ b }) => {
   const [type, setType] = useState("password");
   const [icon, setIcon] = useState(FaEyeSlash);
   const handleToggle = () => {
+<<<<<<< HEAD
     setIcon(type === 'password' ? FaEye : FaEyeSlash);
     setType(type === 'password' ? 'text' : 'password');
+=======
+    if (type == "password") {
+      setIcon(FaEye);
+      setType("text");
+    } else {
+      setIcon(FaEyeSlash);
+      setType("password");
+    }
+>>>>>>> origin/main
   };
 
   return (
 
+<<<<<<< HEAD
     <div className={`text-center w-[25rem] py-4 bg-white mx-auto mt-7 ${b && "z-50 shadow-xl"} rounded-2xl`}>
+=======
+    <div className={`text-center w-[25rem] py-4 bg-white mx-auto ${b ? "z-50 shadow-xl" : ''} rounded-2xl`}>
+>>>>>>> origin/main
       {/* Headings section */}
       <div>
         <FaPinterest className='text-[#e60023] text-3xl mx-auto' />
@@ -36,7 +50,10 @@ export const Signup = ({ b }) => {
               id="email"
               className="w-full rounded-2xl border border-zinc-500 p-3 text-sm focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-200"
               placeholder="Email"
+<<<<<<< HEAD
               autoFocus={b}
+=======
+>>>>>>> origin/main
             />
           </div>
           {/* Password field */}

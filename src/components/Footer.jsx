@@ -1,5 +1,6 @@
 
 export const Footer = () => {
+<<<<<<< HEAD
     const items = ["Terms of Service", "Privacy Policy", "Help", "Iphone App", "Android App", "Users", "Collections", "Shopping", "Today", "Explore", "Watch", "Shop"]
 
     return (
@@ -10,6 +11,10 @@ export const Footer = () => {
                         ))}
                     </div>
                 </div>
+=======
+    return (
+        <div></div>
+>>>>>>> origin/main
             
        
     )
