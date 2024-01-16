@@ -4,18 +4,14 @@ import { Signup } from "./Signup.jsx";
 import { Login } from "./Login.jsx";
 import { useState } from "react";
 
+
 export const Nav = () => {
   const leftItems = ["Today", "Watch", "Explore"];
   const rightItems = ["About", "Business", "Blog"];
   const [showLogin, setshowLogin] = useState(false);
   const [showSignup, setshowSignup] = useState(false);
-  const logIn = () => {
-    setshowLogin(!showLogin);
-    
-  };
-  const signUp = () => {
-    setshowSignup(!showSignup);
-  };
+  const logIn = () => setshowLogin((login) => !login );
+  const signUp = () => setshowSignup((signup) => !signup );
 
   return (
       <div id="top" className="h-[15vh] bg-white relative">
@@ -65,9 +61,7 @@ export const Nav = () => {
             <div className="flex justify-center items-center gap-5">
               <div className="flex gap-3 text-md font-semibold ">
                 {rightItems.map((b, i) => (
-                  <a href="" key={i} className="hover:underline p-2">
-                    {" "}
-                    {b}
+                  <a href="" key={i} className="hover:underline p-2">{b}
                   </a>
                 ))}
               </div>
@@ -75,18 +69,14 @@ export const Nav = () => {
               {/* Login & Signup Buttons */}
               <div className="flex gap-2 text-md font-semibold">
                 <button
-                  className={`bg-[#e60023] text-white px-3 rounded-full hover:bg-red-700 ${showLogin ? "z-50" : ""
-                    }`}
-                  onClick={logIn}
-                >
+                  className={`bg-[#e60023] text-white px-3 rounded-full hover:bg-red-700 ${showLogin ? "z-50" : ""}`}
+                  onClick={logIn}>
                   Log in
                 </button>
 
                 <button
-                  className={`bg-slate-100 px-3 py-2 rounded-full hover:bg-slate-200 ${showSignup ? "z-50" : ""
-                    }`}
-                  onClick={signUp}
-                >
+                  className={`bg-slate-100 px-3 py-2 rounded-full hover:bg-slate-200 ${showSignup ? "z-50" : ""}`}
+                  onClick={signUp}>
                   Sign up
                 </button>
               </div>

@@ -2,10 +2,10 @@ import TextContent from './TextContent';
 
 export const Shop = () => {
   return (
-    <div id="shop" className='z-0 bg-[#ffe2eb] w-full h-[40rem] flex'>
+    <div id="shop"  className='z-0 bg-[#ffe2eb] w-full h-[40rem] flex'>
     <div className="w-1/2 h-full">
         <div className='w-full h-full hover:border hover:border-blue-500'>
-            <img src={`../src/assets/images/4.jpg`} alt={`image1`} className=' w-full h-full object-cover'/>
+            <img src='https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?q=80&w=1370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt={`image1`} className=' w-full h-full object-cover'/>
         </div>
     </div>
     <TextContent 
