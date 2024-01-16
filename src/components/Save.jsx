@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import TextContent from './TextContent.jsx';
 
 export const Save = () => {
@@ -16,20 +15,6 @@ export const Save = () => {
                     <button className='text-teal-100 bg-teal-800 font-bold py-3 px-5 text-sm rounded-full m-1'>Explore</button>
                 </div>
             </div> */}
-=======
-
-
-export const Save = () => {
-    return (
-        <div id="save" className='h-[40rem] bg-teal-100 w-full flex'>
-            <div className="w-1/2 h-full flex justify-center items-center">
-                <div className='text-center'>
-                    <h1 className='font-bold text-[3.6rem] text-teal-800'>Save ideas you like</h1>
-                    <p className="text-[1.35rem] leading-7 py-3 w-3/5 mx-auto text-teal-800">Collect your favorites so you can get back to them later.</p>
-                    <button className='text-teal-100 bg-teal-800 font-bold py-3 px-5 text-sm rounded-full m-1'>Explore</button>
-                </div>
-            </div>
->>>>>>> origin/main
             <div className="w-1/2  h-full py-8">
                 <div className='w-11/12 h-full relative mx-auto'>
                         <div className="absolute top-1 right-2">
