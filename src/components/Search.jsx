@@ -25,10 +25,11 @@ export const Search = () => {
                 </div>
             </div>
             <TextContent 
-            head="Search for an idea"
-            desc="What do you want to try next? Think of something you&apos;re into--like &quot;easy chicken dinner&quot; --and see what you find."
-            color="rose-700"
-            btn='#fffd93'
+            head="Search for an idea" 
+            desc="What do you want to try next? Think of something you&apos;re into--like &quot;easy chicken dinner&quot; --and see what you find." 
+            textColor="text-rose-800" 
+            btnText='text-[#fffd93]'
+            btnBg="bg-rose-800"
             />
             
         </div>

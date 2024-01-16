@@ -11,8 +11,9 @@ export const Shop = () => {
     <TextContent 
     head="See it, make it, try it, do it"
     desc="The best part of Pinterest is discovering new things and ideas from people around the world."
-    color="red-500"
-    btn="#ffe2eb"
+    textColor="text-red-700" 
+    btnText='text-[#ffe2eb]'
+    btnBg="bg-red-700"
     />
 </div>
   )

@@ -5,8 +5,9 @@ export const Save = () => {
         <div id="save" className='h-[40rem] bg-[#c3efef] w-full flex'>
             <TextContent head="Save ideas you like"
             desc="Collect your favorites so you can get back to them later."
-            color="teal-800"
-            btn="#c3efef"
+            textColor="text-teal-800"
+            btnText="text-[#c3efef]"
+            btnBg='bg-teal-800'
             />
             {/* <div className="w-1/2 h-full flex justify-center items-center">
                 <div className='text-center'>
