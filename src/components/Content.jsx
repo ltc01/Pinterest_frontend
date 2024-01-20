@@ -83,7 +83,7 @@ export const Content = () => {
     return (
         <>
             <div className="w-full h-[75vh]" id='content'>
-                <div className="h-[75vh] mt-10 overflow-hidden ">
+                <div className="h-full mt-10 overflow-hidden z-0 ">
                     <h1 className="text-6xl text-center font-semibold">Get your next</h1>
                     <div className="absolute w-full mt-8">
                        { isIntervalStarted && <h1 className={`animate__animated animate__fadeOutUp animate-fast animate__infinite text-center font-semibold text-6xl ${colors[index]}`}>{text[index]}</h1>}
@@ -97,7 +97,7 @@ export const Content = () => {
                     </div>
                 </div>
 
-                <div className="text-center w-full h-[22vh] sticky bottom-0">
+                <div className="text-center w-full h-[22vh] z-10 relative bottom-32">
                     <div className="relative bottom-1 w-full py-3">
                         <a href="#search">
                             <FaAngleDown className="text-white animate-bounce mx-auto bg-[#0076d3] rounded-full h-12 p-2 w-fit" />
