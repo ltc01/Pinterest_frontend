@@ -2,7 +2,7 @@ import TextContent from './TextContent.jsx';
 
 export const Save = () => {
     return (
-        <div id="save" className='bg-[#c3efef] max-sm:flex-col w-full flex'>
+        <div id="save" className='bg-[#c3efef] flex-col md:flex-row w-full flex'>
             <TextContent head="Save ideas you like"
                 desc="Collect your favorites so you can get back to them later."
                 textColor="text-teal-800"
