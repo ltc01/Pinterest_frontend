@@ -7,7 +7,8 @@
   }
 
 .animate__fadeOutUp {
-    --animate-duration: 2s;
-    
-    
+    --animate-duration: 2s;  
+}
+.shadow-top {
+  box-shadow: 0 -50px 90px 11px rgb(255, 255, 255);
 }

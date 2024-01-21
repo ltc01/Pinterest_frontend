@@ -103,7 +103,7 @@ export const Content = () => {
                             <FaAngleDown className="text-white animate-bounce mx-auto bg-[#0076d3] rounded-full h-12 p-2 w-fit" />
                         </a>
                     </div>
-                    <div className="font-semibold bg-[#fffd93] py-6 w-full text-md">
+                    <div className="font-semibold shadow-top bg-[#fffd93] py-6 w-full text-md">
                         <a href="#search">Here&apos;s how it works <FaAngleDown className="inline" /></a>
                     </div>
                 </div>
