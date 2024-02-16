@@ -6,8 +6,8 @@ export const Search = () => {
     // const img = ["1.jpg","2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg"]
 
     return (
-        <div className='relative bg-[#fffd93] w-full flex md:flex-row flex-col' id="search">
-            <div className="md:w-[50%] h-fit w-full">
+        <div className='relative bg-[#fffd93] w-full flex lg:flex-row mx-auto' id="search">
+            <div className="md:w-[50%] hidden lg:block">
                 <div className='relative h-[38rem] md:bottom-0 bottom-18 md:left-0 -left-40'>
                     <img src='https://images.unsplash.com/photo-1615557960916-5f4791effe9d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt={`image1`} className='relative top-12 left-96 w-40 h-40 rounded-[40px] object-cover' />
                     <img src='https://images.unsplash.com/photo-1574484284002-952d92456975?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt={`image2`} className='w-36 left-[26rem] top-48 relative rounded-[40px]  object-contain' />

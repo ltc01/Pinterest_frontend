@@ -97,8 +97,8 @@ export const Content = () => {
                     </div>
                 </div>
 
-                <div className="text-center w-full h-[22vh] z-10 relative bottom-32">
-                    <div className="relative bottom-1 w-full py-3">
+                <div className="text-center w-full h-[22vh] z-10 relative bottom-32 mx-auto">
+                    <div className="w-fit mx-auto py-3">
                         <a href="#search">
                             <FaAngleDown className="text-white animate-bounce mx-auto bg-[#0076d3] rounded-full h-12 p-2 w-fit" />
                         </a>

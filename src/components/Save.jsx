@@ -9,7 +9,7 @@ export const Save = () => {
                 btnText="text-[#c3efef]"
                 btnBg='bg-teal-800'
             />
-            <div className="md:w-[50%] w-full py-8">
+            <div className="md:w-[50%] hidden lg:block w-full py-8">
                 <div className='h-[38rem] relative'>
                     <div className="absolute md:top-1 -top-40 right-2">
                         <img src='https://images.unsplash.com/photo-1615874694520-474822394e73?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt={`image1`} className=' w-[13rem] rounded-[2.5rem] h-[14rem] object-cover' />
