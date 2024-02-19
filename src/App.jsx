@@ -6,7 +6,7 @@ import { Shop } from './components/Shop.jsx';
 import { Bottom } from './components/Bottom.jsx';
 import { Routes, Route } from "react-router-dom";
 import { Footer } from './components/Footer.jsx'
-import { Today } from './components/Today.jsx'
+import Today  from './components/Today.jsx'
 
 
 function App() {

@@ -5,6 +5,7 @@ import { Login } from "./Login.jsx";
 import { useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { IoClose } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 export const Nav = () => {
   const leftItems = ["Today", "Watch", "Explore"];
@@ -38,20 +39,20 @@ export const Nav = () => {
           <div className="flex justify-center items-center">
             {/* Brand Logo  */}
             <div className="visible pr-4">
-              <a href="" className="flex pl-5">
+              <Link to={"/"} className="flex pl-5">
                 <FaPinterest className="text-[#e60023] text-3xl" />
                 <h1 className="text-[#e60023] font-semibold text-xl font-sans tracking-tighter ml-1">
                   Pinterest
                 </h1>
-              </a>
+              </Link>
             </div>
 
             {/* Left-nav items */}
             <div className="lg:flex hidden text-md font-semibold items-end  ">
               {leftItems.map((b, i) => (
-                <a href="" key={i} className="hover:bg-slate-200 rounded-lg p-2 px-4 ">
+                <Link to={`/${b.toLowerCase()}/`} key={i} className="hover:bg-slate-200 rounded-lg p-2 px-4 ">
                   {b}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -60,8 +61,8 @@ export const Nav = () => {
           <div className="lg:flex justify-center hidden items-center">
             <div className="flex pr-4 text-md font-semibold ">
               {rightItems.map((b, i) => (
-                <a href="" key={i} className="hover:underline px-4 p-2">{b}
-                </a>
+                <Link to={`/${b.toLowerCase()}`} key={i} className="hover:underline px-4 p-2">{b}
+                </Link>
               ))}
             </div>
 
@@ -90,13 +91,14 @@ export const Nav = () => {
               <div className="absolute bg-black/90 text-white right-6 w-1/2 md:w-1/3 rounded-3xl p-8 font-medium">
                 <ul>
                   {leftItems.map((b, i) => (
-                    <li key={i} className="hover:bg-slate-300 hover:text-black rounded-lg p-3">
-                      {b}
+                    <li onClick={() => setShowNav(!showNav)} key={i} className="hover:bg-slate-300 hover:text-black rounded-lg p-3">
+                      <Link to={`/${b.toLowerCase()}`}>{b}</Link>
                     </li>
                   ))}
                   <hr className="border-gray-400 my-3" />
                   {rightItems.map((b, i) => (
-                    <li key={i} className="hover:bg-slate-300 hover:text-black rounded-lg p-3">{b}
+                    <li onClick={() => setShowNav(!showNav)} key={i} className="hover:bg-slate-300 hover:text-black rounded-lg p-3">
+                      <Link to={`/${b.toLowerCase()}`}>{b}</Link>
                     </li>
                   ))}
                 </ul>
