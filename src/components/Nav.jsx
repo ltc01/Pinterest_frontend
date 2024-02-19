@@ -17,10 +17,10 @@ export const Nav = () => {
   const signUp = () => setshowSignup((signup) => !signup);
 
   return (
-    <div id="top" className="h-[15vh] bg-white relative">
+    <header id="top" className="h-[15vh] bg-white relative">
 
       {/* Navigation bar  */}
-      <div className="fixed top-0 z-40 bg-white w-full h-fit">
+      <nav className="fixed top-0 z-40 bg-white w-full h-fit">
         {/* Login & Signup toogle */}
         {showLogin && (
           <div className=" w-full h-screen fixed bg-black/40 z-50" onClick={() => setshowLogin(!showLogin)}>
@@ -115,8 +115,8 @@ export const Nav = () => {
             )}
           </div>
         </div>
-      </div>
-    </div>
+      </nav>
+    </header>
   );
 };
 Nav.propTypes = {

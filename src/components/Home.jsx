@@ -1,9 +1,9 @@
 import { FaAngleDown } from "react-icons/fa";
 import 'animate.css';
-import { useEffect, useState } from "react";
+import { Children, useEffect, useState } from "react";
 
 
-export const Content = () => {
+export const Home = ({Children}) => {
 
     const imges = {
         img1: [
@@ -82,7 +82,7 @@ export const Content = () => {
 
     return (
         <>
-            <div className="w-full h-[75vh]" id='content'>
+            <main className="w-full h-[80vh]" id='content'>
                 <div className="h-full mt-10 overflow-hidden z-0 ">
                     <h1 className="text-6xl text-center font-semibold">Get your next</h1>
                     <div className="absolute w-full mt-8">
@@ -97,17 +97,20 @@ export const Content = () => {
                     </div>
                 </div>
 
-                <div className="text-center w-full h-[22vh] z-10 relative bottom-32 mx-auto">
-                    <div className="w-fit mx-auto py-3">
-                        <a href="#search">
-                            <FaAngleDown className="text-white animate-bounce mx-auto bg-[#0076d3] rounded-full h-12 p-2 w-fit" />
-                        </a>
-                    </div>
-                    <div className="font-semibold shadow-top bg-[#fffd93] py-6 w-full text-md">
-                        <a href="#search">Here&apos;s how it works <FaAngleDown className="inline" /></a>
+                <div className="relative">
+                    <div className="absolute bottom-0 left-0 right-0 text-center ">
+                        <div className="w-fit mx-auto py-3">
+                            <a href="#search">
+                                <FaAngleDown className="text-white animate-bounce mx-auto bg-[#0076d3] rounded-full h-12 p-2 w-fit" />
+                            </a>
+                        </div>
+                        <div className="font-semibold shadow-top bg-[#fffd93] py-6 w-full text-md">
+                            <a href="#search">Here&apos;s how it works <FaAngleDown className="inline" /></a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </main>
+            {Children}
         </>
     );
 };
