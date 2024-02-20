@@ -2,9 +2,9 @@ import { FcGoogle } from "react-icons/fc";
 import { CiFacebook } from "react-icons/ci";
 import { FaEye, FaEyeSlash, FaPinterest } from "react-icons/fa";
 import { useState } from "react";
-import  PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-export const Login = ({b}) => {
+export const Login = ({ b }) => {
   const [type, setType] = useState("password");
   const [icon, setIcon] = useState(FaEyeSlash);
   const handleToggle = () => {
@@ -18,14 +18,18 @@ export const Login = ({b}) => {
   };
 
   return (
-    <div className={`text-center w-[25rem] mx-auto mt-10 py-6 shadow-2xl relative bg-white rounded-2xl ${b ? "z-50" : ''} `}>
-      <FaPinterest className='text-[#e60023] text-3xl mx-auto' />
+    <div
+      className={`text-center w-[25rem] mx-auto mt-10 py-6 shadow-2xl relative bg-white rounded-2xl ${
+        b ? "z-50" : ""
+      } `}
+    >
+      <FaPinterest className="text-[#e60023] text-3xl mx-auto" />
       <h1 className="text-3xl font-semibold  mb-4">Welcome to Pinterest</h1>
       <div className="text-left px-20">
-        <form action="" method="post">
+        <form action="">
           <label htmlFor="email" className="text-xs">
             Email
-          </label>
+          
           <input
             type="email"
             name="email"
@@ -33,11 +37,11 @@ export const Login = ({b}) => {
             id="email"
             className="w-full rounded-2xl border border-zinc-500 p-3 mb-1 text-sm focus:outline-none focus:ring-1 focus:ring-blue-200 focus:border-blue-400"
             placeholder="Email"
-          />
+          /></label>
 
           <label htmlFor="pass" className="text-xs">
             Password
-          </label>
+          
           <p className="flex">
             <input
               type={type}
@@ -50,6 +54,7 @@ export const Login = ({b}) => {
               {icon}
             </span>
           </p>
+          </label>
 
           <a href="#" className="font-semibold text-xs">
             Forgot your password?
@@ -98,4 +103,4 @@ export const Login = ({b}) => {
 };
 Login.propTypes = {
   b: PropTypes.bool,
-}
+};

@@ -1,6 +1,6 @@
 import { FaAngleDown } from "react-icons/fa";
 import 'animate.css';
-import { Children, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 
 export const Home = ({Children}) => {
