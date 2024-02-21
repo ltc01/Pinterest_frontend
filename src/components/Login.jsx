@@ -5,10 +5,10 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-export const Login = ({ b , setshowLogin}) => {
+export const Login = ({ b, setshowLogin }) => {
   const [type, setType] = useState("password");
   const [icon, setIcon] = useState(FaEyeSlash);
-  const [login, setLogin] = useState(false);
+  const [login, setLogin] = useState(true);
   const handleToggle = () => {
     if (type == "password") {
       setIcon(FaEye);
@@ -20,14 +20,13 @@ export const Login = ({ b , setshowLogin}) => {
   };
   const handleLogin = (e) => {
     e.preventDefault();
-    setshowLogin(!b)
-
-
+    setshowLogin();
+    console.log(b)
   }
 
   return (
     <>
-      { <div
+      {<div
         className={`text-center w-[25rem] mx-auto mt-10 py-6 shadow-2xl relative bg-white rounded-2xl ${b ? "z-50" : ""
           } `}
       >
@@ -70,13 +69,13 @@ export const Login = ({ b , setshowLogin}) => {
               Forgot your password?
             </a>
 
-            <Link
-              to="/User"
-              onClick={(e) => handleLogin(e)}
-              className="block bg-red-600 text-white w-full text-center rounded-3xl p-2 my-2 text-sm font-bold "
-            >
-              Log in
-            </Link>
+            <button 
+            type="submit" onClick={(e) => handleLogin(e)} 
+            className="block bg-red-600 text-white w-full text-center rounded-3xl p-2 my-2 text-sm font-bold ">
+                <Link
+                  to="/User" className="w-full" >Log in</Link>
+              </button>
+
           </form>
           <h2 className="font-bold m-2 text-xs text-center">OR</h2>
           <button className="block bg-blue-600 text-white w-full rounded-3xl p-2 font-bold text-xs ">
