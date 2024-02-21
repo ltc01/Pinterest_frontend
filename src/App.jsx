@@ -7,6 +7,7 @@ import { Bottom } from './components/Bottom.jsx';
 import { Routes, Route } from "react-router-dom";
 import { Footer } from './components/Footer.jsx'
 import Today  from './components/Today.jsx'
+import UserHome from "./components/User/UserHome.jsx";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/about" element={<Today />} />
         <Route path="/business" element={<Today />}/>
         <Route path="/blog" element={<Today />}/>
+        <Route path="/User" element={<UserHome />} />
       </Routes>
       <Footer />
     </>

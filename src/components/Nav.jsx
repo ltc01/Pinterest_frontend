@@ -26,7 +26,7 @@ export const Nav = () => {
           <div
             className=" w-full h-screen fixed bg-black/40 z-40"
           >
-            <Login b={showLogin} />
+            <Login b={showLogin} setshowLogin={setshowLogin} />
           </div>
         )}
         {showSignup && (
